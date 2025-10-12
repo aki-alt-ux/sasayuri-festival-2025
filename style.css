@@ -1,0 +1,199 @@
+/* 全体の基本設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* バナーコンテナ */
+.banner-container {
+    position: relative;
+    width: 800px;
+    max-width: 1000px;
+    height: 100%;
+    box-shadow: 0 4px 20px
+}
+
+/* 背景画像 */
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 子どもたちの配置用コンテナ */
+.children-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 各子どもの基本スタイル */
+.child {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-out;
+    pointer-events: none;
+}
+
+/* 子どもが表示されたときのスタイル */
+.child.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 子どもの画像 */
+.child img {
+    width: 100%;
+    height: auto;
+}
+
+/* 各子どもの配置 */
+#child1 {
+    bottom: 41%;
+    left: 78%;
+    width: 23%;
+}
+
+#child2 {
+    bottom: 1%;
+    left: 31%;
+    width: 51%;
+    z-index: 100;
+}
+
+#child3 {
+    bottom: 30%;
+    left: 38%;
+    width: 28%;
+}
+
+#child4 {
+    bottom: 3%;
+    left: 69%;
+    width: 31%;
+}
+
+#child5 {
+    bottom: 1%;
+    left: -1%;
+    width: 46%;
+}
+
+#child6 {
+    bottom: 40%;
+    left: 3%;
+    width: 26%;
+}
+
+/* 花の画像配置用*/
+.flower-area img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* 花の配置用コンテナ */
+.flower-container {
+    /* width: 10px;
+    height: 10px; */
+    /* position: absolute; */
+}
+
+/* 花のクリックエリア */
+.flower-area {
+    position: absolute;
+    /* width: clamp(50px, 8vw, 120px);    
+    height: clamp(50px, 8vw, 120px);    */
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+/* 花の揺れアニメーション */
+.flower-area.wiggle {
+    animation: wiggle 2s ease-in-out infinite
+}
+
+@keyframes wiggle {
+    0%, 100% { 
+        transform: rotate(0deg) scale(1); 
+    }
+    25% { transform: rotate(-3deg) scale(1.05); 
+    }
+    75% { transform: rotate(3deg) scale(1.05); 
+    }
+}
+
+/* 各花エリアの配置 */
+#flower1 {
+    bottom: 42%;
+    left: 75%;
+    width: 23%;
+}
+
+#flower2 {
+    bottom: 19%;
+    left: 35%;
+    width: 51%;
+    z-index: 10;
+}
+
+#flower3 {
+    bottom: 33%;
+    left: 34%;
+    width: 28%;
+}
+
+
+#flower4 {
+    bottom: 11%;
+    left: 63%;
+    width: 31%;
+}
+
+#flower5 {
+    bottom: 10%;
+    left: 15%;
+    width: 46%;
+}
+
+#flower6 {
+    bottom: 40%;
+    left: 6%;
+    width: 26%;
+}
+
+/* 完了後の表示 */
+.complete-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px 50px;
+    border-radius: 20px;
+    font-size: 28px;
+    color: #ff69b4;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: transform 0.5s ease-out;
+}
+
+.complete-message.show {
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 100;
+}
