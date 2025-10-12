@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第4回 ささゆりフェスタ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="banner-container">
+    <!-- 背景画像 -->
+    <img src="images/background.jpg" alt="背景" class="background">
+    
+    <!--子どもたちのコンテナ -->
+    <div class="children-container">
+        <div id="child1" class="child">
+            <img src="images/children_img01.png" alt="子ども1">
+        </div>
+        <div id="child2" class="child">
+            <img src="images/children_img02.png" alt="子ども2">
+        </div>
+        <div id="child3" class="child">
+            <img src="images/children_img03.png" alt="子ども3">
+        </div>
+        <div id="child4" class="child">
+            <img src="images/children_img04.png" alt="子ども4">
+        </div>
+        <div id="child5" class="child">
+            <img src="images/children_img05.png" alt="子ども5">
+        </div>
+        <div id="child6" class="child">
+            <img src="images/children_img06.png" alt="子ども6">
+        </div>
+    </div>
+
+    <!-- 花のクリックエリア -->
+    <div class="flower-container">
+        <div id="flower1" class="flower-area wiggle" data-child="child1">
+            <img src="images/flower01.png" alt="花1">
+        </div>
+        <div id="flower2" class="flower-area wiggle" data-child="child2">
+            <img src="images/flower02.png" alt="花2">
+        </div>
+        <div id="flower3" class="flower-area wiggle" data-child="child3">
+            <img src="images/flower03.png" alt="花3">
+        </div>
+        <div id="flower4" class="flower-area wiggle" data-child="child4">
+            <img src="images/flower04.png" alt="花4">
+        </div>
+        <div id="flower5" class="flower-area wiggle" data-child="child5">
+            <img src="images/flower05.png" alt="花5">
+        </div>
+        <div id="flower6" class="flower-area wiggle" data-child="child6">
+            <img src="images/flower06.png" alt="花6">
+        </div>
+    </div>
+
+    <!-- 完了後の表示 -->
+     <div id="completeMessage" class="complete-message">
+        みんなみつけたね！<br>11月15日にまってるよ！
+     </div>
+ </div>    
+ <script src="script.js"></script>
+</body>
+</html>
