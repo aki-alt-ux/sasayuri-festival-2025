@@ -62,9 +62,9 @@ body {
 
 /* 各子どもの配置 */
 #child1 {
-    bottom: 41%;
-    left: 78%;
-    width: 23%;
+    bottom: 30%;
+    left: 73%;
+    width: 33%;
 }
 
 #child2 {
@@ -140,41 +140,40 @@ body {
 
 /* 各花エリアの配置 */
 #flower1 {
-    bottom: 42%;
-    left: 75%;
-    width: 23%;
+    bottom: 27%;
+    left: 72%;
+    width: 26%;
 }
 
 #flower2 {
-    bottom: 19%;
-    left: 35%;
-    width: 51%;
-    z-index: 10;
+    bottom: 0%;
+    left: 24%;
+    width: 31%;
+    z-index: 100;
 }
 
 #flower3 {
-    bottom: 33%;
+    bottom: 27%;
     left: 34%;
     width: 28%;
 }
 
-
 #flower4 {
-    bottom: 11%;
-    left: 63%;
-    width: 31%;
+    bottom: 0%;
+    left: 65%;
+    width: 35%;
 }
 
 #flower5 {
-    bottom: 10%;
-    left: 15%;
-    width: 46%;
+    bottom: 0%;
+    left: 3%;
+    width: 31%;
 }
 
 #flower6 {
-    bottom: 40%;
+    bottom: 32%;
     left: 6%;
-    width: 26%;
+    width: 20%;
 }
 
 /* 完了後の表示 */
