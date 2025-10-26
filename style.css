@@ -66,42 +66,61 @@ body {
     pointer-events: auto;
 }
 
+/* 3番目の画像（_3.png）にバウンドアニメーション */
+.child img[src*="_3.png"] {
+    animation: bounce 0.6s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(-8px); 
+    }
+}
+
 /* 各子どもの配置 */
 #child1 {
     bottom: 30%;
     left: 73%;
     width: 33%;
+    z-index: 10;
 }
 
 #child2 {
     bottom: 1%;
     left: 31%;
     width: 51%;
-    z-index: 100;
+    z-index: 20;
 }
 
 #child3 {
     bottom: 30%;
     left: 38%;
     width: 28%;
+    z-index: 18;
 }
 
 #child4 {
     bottom: 3%;
     left: 69%;
     width: 31%;
+    z-index: 40;
 }
 
 #child5 {
     bottom: 1%;
     left: -1%;
     width: 46%;
+    z-index: 20;
 }
 
 #child6 {
     bottom: 40%;
     left: 3%;
     width: 26%;
+    z-index: 18;
 }
 
 /* 花の画像配置用*/
@@ -149,37 +168,42 @@ body {
     bottom: 27%;
     left: 72%;
     width: 26%;
+    z-index: 10;
 }
 
 #flower2 {
     bottom: 0%;
     left: 24%;
     width: 31%;
-    z-index: 100;
+    z-index: 20;
 }
 
 #flower3 {
     bottom: 27%;
     left: 34%;
     width: 28%;
+    z-index: 19;
 }
 
 #flower4 {
     bottom: 0%;
     left: 65%;
     width: 35%;
+    z-index: 40;
 }
 
 #flower5 {
     bottom: 0%;
     left: 3%;
     width: 31%;
+    z-index: 50;
 }
 
 #flower6 {
     bottom: 32%;
     left: 6%;
     width: 20%;
+    z-index: 19;
 }
 
 /* 完了後の表示 */

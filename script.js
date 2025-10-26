@@ -5,15 +5,76 @@
         // すべての花エリアを取得
         const flowerAreas = document.querySelectorAll('.flower-area');
 
+        // 画像切り替え機能
+        const childImages = {
+            'child1': [
+                'images/children_img01_1.png',
+                'images/children_img01_2.png', 
+                'images/children_img01_3.png'
+            ],
+            'child2': [
+                'images/children_img02_1.png',
+                'images/children_img02_2.png', 
+                'images/children_img02_3.png'
+            ],
+            'child3': [
+                'images/children_img03_1.png',
+                'images/children_img03_2.png', 
+                'images/children_img03_3.png'
+            ],
+            'child4': [
+                'images/children_img04_1.png',
+                'images/children_img04_2.png', 
+                'images/children_img04_3.png'
+            ],
+            'child5': [
+                'images/children_img05_1.png',
+                'images/children_img05_2.png', 
+                'images/children_img05_3.png'
+            ],
+            'child6': [
+                'images/children_img06_1.png',
+                'images/children_img06_2.png', 
+                'images/children_img06_3.png'
+            ]
+        };
+
+        const currentImageIndexes = {
+            'child1': 0, 'child2': 0, 'child3': 0, 
+            'child4': 0, 'child5': 0, 'child6': 0
+        };
+
+        // 各子どもの画像クリックイベント設定
+        function setupChildImageSwitch(childId) {
+            const childImage = document.getElementById(childId + '-image');
+            
+            if (childImage) {
+                childImage.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const images = childImages[childId];
+                    const currentIndex = currentImageIndexes[childId];
+                    
+                    // 最後の画像（3番目）に到達したら終了
+                    if (currentIndex < images.length - 1) {
+                        currentImageIndexes[childId]++;
+                        this.src = images[currentImageIndexes[childId]];
+                    }
+                });
+            }
+        }
+
         // 各花エリアにクリックイベントを設定
         flowerAreas.forEach(flower => {
             flower.addEventListener('click', function() {
                 // どの子どもを表示するか取得
                 const childId = this.getAttribute('data-child');
                 const child = document.getElementById(childId);
+                
+                console.log('花クリック:', childId, '要素:', child);
 
                 // まだ表示されていない場合のみ処理
                 if (!child.classList.contains('show')) {
+                    console.log('子どもを表示:', childId);
                     // 子どもを表示
                     child.classList.add('show');
                     
@@ -123,61 +184,3 @@ setInterval(() => {
     createFallingBeam();
 }, 40); // 0.4秒ごとに生成
 
-
-// 画像切り替え機能
-const childImages = {
-    'child1': [
-        'images/children_img01_1.png',
-        'images/children_img01_2.png', 
-        'images/children_img01_3.png'
-    ],
-    'child2': [
-        'images/children_img02_1.png',
-        'images/children_img02_2.png', 
-        'images/children_img02_3.png'
-    ],
-    'child3': [
-        'images/children_img03_1.png',
-        'images/children_img03_2.png', 
-        'images/children_img03_3.png'
-    ],
-    'child4': [
-        'images/children_img04_1.png',
-        'images/children_img04_2.png', 
-        'images/children_img04_3.png'
-    ],
-    'child5': [
-        'images/children_img05_1.png',
-        'images/children_img05_2.png', 
-        'images/children_img05_3.png'
-    ],
-    'child6': [
-        'images/children_img06_1.png',
-        'images/children_img06_2.png', 
-        'images/children_img06_3.png'
-    ]
-};
-
-const currentImageIndexes = {
-    'child1': 0, 'child2': 0, 'child3': 0, 
-    'child4': 0, 'child5': 0, 'child6': 0
-};
-
-// 各子どもの画像クリックイベント設定
-function setupChildImageSwitch(childId) {
-    const childImage = document.getElementById(childId + '-image');
-    
-    if (childImage) {
-        childImage.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const images = childImages[childId];
-            const currentIndex = currentImageIndexes[childId];
-            
-            // 最後の画像（3番目）に到達したら終了
-            if (currentIndex < images.length - 1) {
-                currentImageIndexes[childId]++;
-                this.src = images[currentImageIndexes[childId]];
-            }
-        });
-    }
-}
