@@ -60,6 +60,12 @@ body {
     height: auto;
 }
 
+/* 全員の子どもの画像はクリック可能 */
+.child img {
+    cursor: pointer;
+    pointer-events: auto;
+}
+
 /* 各子どもの配置 */
 #child1 {
     bottom: 30%;
