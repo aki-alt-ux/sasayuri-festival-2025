@@ -10,6 +10,10 @@
  <div class="banner-container">
     <!-- 背景画像 -->
     <img src="images/background.jpg" alt="背景" class="background">
+    <!-- 太陽光のオーバーレイ -->
+    <div class="sunlight-layer" aria-hidden="true"></div>
+    <!-- 雲のオーバーレイ -->
+    <div class="cloud-layer" aria-hidden="true"></div>
     
     <!--子どもたちのコンテナ -->
     <div class="children-container">
@@ -34,31 +38,37 @@
     </div>
 
     <!-- 花のクリックエリア -->
-    <div class="flower-container">
-        <div id="flower1" class="flower-area wiggle" data-child="child1">
-            <img src="images/flower01.png" alt="花1">
+    <div class="cosmos-container">
+        <div id="cosmos1" class="cosmos-area wiggle" data-child="child1">
+            <img src="images/cosmos01.png" alt="花1">
         </div>
-        <div id="flower2" class="flower-area wiggle" data-child="child2">
-            <img src="images/flower02.png" alt="花2">
+        <div id="cosmos2" class="cosmos-area wiggle" data-child="child2">
+            <img src="images/cosmos02.png" alt="花2">
         </div>
-        <div id="flower3" class="flower-area wiggle" data-child="child3">
-            <img src="images/flower03.png" alt="花3">
+        <div id="cosmos3" class="cosmos-area wiggle" data-child="child3">
+            <img src="images/cosmos03.png" alt="花3">
         </div>
-        <div id="flower4" class="flower-area wiggle" data-child="child4">
-            <img src="images/flower04.png" alt="花4">
+        <div id="cosmos4" class="cosmos-area wiggle" data-child="child4">
+            <img src="images/cosmos04.png" alt="花4">
         </div>
-        <div id="flower5" class="flower-area wiggle" data-child="child5">
-            <img src="images/flower05.png" alt="花5">
+        <div id="cosmos5" class="cosmos-area wiggle" data-child="child5">
+            <img src="images/cosmos05.png" alt="花5">
         </div>
-        <div id="flower6" class="flower-area wiggle" data-child="child6">
-            <img src="images/flower06.png" alt="花6">
+        <div id="cosmos6" class="cosmos-area wiggle" data-child="child6">
+            <img src="images/cosmos06.png" alt="花6">
         </div>
     </div>
 
+    <!-- 初回案内メッセージ -->
+     <div id="initialMessage" class="complete-message initial-message">
+        かくれているおともだちをさがしてね！
+     </div>
+
     <!-- 完了後の表示 -->
      <div id="completeMessage" class="complete-message">
-        みんなみつけたね！<br>11月15日にまってるよ！
+        みんなみつけたね！
      </div>
+     <img src="images/logo.png" alt="ロゴ" id="festivalLogo" class="festival-logo" aria-hidden="true">
  </div>    
  <script src="script.js"></script>
 </body>

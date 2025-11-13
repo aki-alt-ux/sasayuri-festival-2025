@@ -99,21 +99,21 @@ body {
 }
 
 /* 花の画像配置用*/
-.flower-area img {
+.cosmos-area img {
     width: 100%;
     height: auto;
 }
 
 
 /* 花の配置用コンテナ */
-.flower-container {
+.cosmos-container {
     /* width: 10px;
     height: 10px; */
     /* position: absolute; */
 }
 
 /* 花のクリックエリア */
-.flower-area {
+.cosmos-area {
     position: absolute;
     /* width: clamp(50px, 8vw, 120px);    
     height: clamp(50px, 8vw, 120px);    */
@@ -124,7 +124,7 @@ body {
 }
 
 /* 花の揺れアニメーション */
-.flower-area.wiggle {
+.cosmos-area.wiggle {
     animation: wiggle 2s ease-in-out infinite
 }
 
@@ -139,39 +139,39 @@ body {
 }
 
 /* 各花エリアの配置 */
-#flower1 {
+#cosmos1 {
     bottom: 42%;
     left: 75%;
     width: 23%;
 }
 
-#flower2 {
+#cosmos2 {
     bottom: 19%;
     left: 35%;
     width: 51%;
     z-index: 10;
 }
 
-#flower3 {
+#cosmos3 {
     bottom: 33%;
     left: 34%;
     width: 28%;
 }
 
 
-#flower4 {
+#cosmos4 {
     bottom: 11%;
     left: 63%;
     width: 31%;
 }
 
-#flower5 {
+#cosmos5 {
     bottom: 10%;
     left: 15%;
     width: 46%;
 }
 
-#flower6 {
+#cosmos6 {
     bottom: 40%;
     left: 6%;
     width: 26%;

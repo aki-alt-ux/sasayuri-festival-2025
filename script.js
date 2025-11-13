@@ -1,9 +1,11 @@
         // 見つけた子どもの数をカウント
         let foundChildren = 0;
         const totalChildren = 6;
+        const logo = document.getElementById('festivalLogo');
+        const initialMessage = document.getElementById('initialMessage');
 
         // すべての花エリアを取得
-        const flowerAreas = document.querySelectorAll('.flower-area');
+        const cosmosAreas = document.querySelectorAll('.cosmos-area');
 
         // 画像切り替え機能
         const childImages = {
@@ -63,9 +65,16 @@
             }
         }
 
+        if (initialMessage) {
+            initialMessage.classList.add('show');
+            setTimeout(() => {
+                initialMessage.classList.remove('show');
+            }, 5000);
+        }
+
         // 各花エリアにクリックイベントを設定
-        flowerAreas.forEach(flower => {
-            flower.addEventListener('click', function() {
+        cosmosAreas.forEach(cosmos => {
+            cosmos.addEventListener('click', function() {
                 // どの子どもを表示するか取得
                 const childId = this.getAttribute('data-child');
                 const child = document.getElementById(childId);
@@ -109,6 +118,10 @@
         function showCompleteMessage() {
             const message = document.getElementById('completeMessage');
             message.classList.add('show');
+
+            if (logo && !logo.classList.contains('visible')) {
+                logo.classList.add('visible');
+            }
 
             // 5秒後にメッセージを消す
             setTimeout(() => {

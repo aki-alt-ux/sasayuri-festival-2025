@@ -8,7 +8,7 @@
 ### 1. 表示仕様
 - **背景画像**: `images/background.jpg`
 - **子ども**: 6人（child1〜child6）
-- **花**: 6個（flower1〜flower6）
+- **花**: 6個（cosmos1〜cosmos6）
 - **レイアウト**: 800px幅、レスポンシブ対応
 
 ### 2. 基本動作
@@ -55,11 +55,11 @@
     <!-- child3〜child6 も同様 -->
 </div>
 
-<div class="flower-container">
-    <div id="flower1" class="flower-area wiggle" data-child="child1">
-        <img src="images/flower01.png" alt="花1">
+<div class="cosmos-container">
+    <div id="cosmos1" class="cosmos-area wiggle" data-child="child1">
+        <img src="images/cosmos01.png" alt="花1">
     </div>
-    <!-- flower2〜flower6 -->
+    <!-- cosmos2〜cosmos6 -->
 </div>
 ```
 
@@ -91,7 +91,7 @@
     ├── children_img04_1.png, children_img04_2.png, children_img04_3.png
     ├── children_img05_1.png, children_img05_2.png, children_img05_3.png
     ├── children_img06_1.png, children_img06_2.png, children_img06_3.png
-    └── flower01.png〜flower06.png
+    └── cosmos01.png〜cosmos06.png
 ```
 
 ## 開発ルール

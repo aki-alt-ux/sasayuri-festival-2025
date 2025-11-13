@@ -3,11 +3,11 @@
         const totalChildren = 6;
 
         // すべての花エリアを取得
-        const flowerAreas = document.querySelectorAll('.flower-area');
+        const cosmosAreas = document.querySelectorAll('.cosmos-area');
 
         // 各花エリアにクリックイベントを設定
-        flowerAreas.forEach(flower => {
-            flower.addEventListener('click', function() {
+        cosmosAreas.forEach(cosmos => {
+            cosmos.addEventListener('click', function() {
                 // どの子どもを表示するか取得
                 const childId = this.getAttribute('data-child');
                 const child = document.getElementById(childId);
